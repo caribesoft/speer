@@ -1,0 +1,32 @@
+<div class="container">
+	<h4>PORTFOLIO</h4>
+</div>
+<div class="container">
+  <div class="row">	
+	<div class="col-md-12">
+	<div class="thistable">	
+		<table class="table table-hover table-responsive table-bordered table-condensed">
+			<thead>
+				<th>Symbol</th>
+				<th>Name</th>
+				<th>Qty</th>
+				<th>Price</th>
+				<th>Total</th>
+				<th>Date</th>
+			</thead>
+			<tbody>
+				<tr *ngFor="let item of portfolio">
+					<td>{{item.data.symbol}}</td>
+					<td width="15%">{{item.data.name}}</td>
+					<td width="15%">{{item.data.qty}}</td>
+					<td class="rig">{{item.data.price | currency }}</td>
+					<td class="rig">{{item.data.price * item.data.qty | currency }}</td>
+					<td class="rig">{{item.data.timestamp | date: 'MMM, dd, yyyy hh:mm'}}</td>
+				</tr>	
+			</tbody>
+		</table>
+	</div>
+	</div>
+  </div>
+</div>  		
+

@@ -1,0 +1,46 @@
+<div class="container">
+   <h4>WALLET</h4>
+</div>
+
+<div class="container">
+	<div class="col-md-12">
+		<div class="row justify-content-start">
+		<div class="col-md-4">
+			<div class="card">
+  					<div class="card-header verde">
+  						<h5><span class="material-icons">add_circle</span> Add balance</h5>
+  			    	</div>
+  			    	<form class="forma" [formGroup]="addbalanceForm">
+ 						<label>AMOUNT</label>
+ 						<input type="text" class="form-control" formControlName="amount" 
+ 						[class.is-invalid]="addbalanceForm.get('amount') && addbalanceForm.get('amount').invalid"> 
+ 						<button type="reset" class="btn btn-sm">RESET</button>
+ 						<button class="btn btn-sm" (click)="submitForm()">SUBMIT</button>
+ 						<br>
+ 						<div class="error-message">{{errorMessage}}</div>
+  				    </form>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header verde">
+				  <h5><span class="material-icons">monetization_on</span> Wallet Balance </h5>
+				</div>
+				<div class="balance">
+					<p>{{balance | currency }}</p> 
+				</div>  
+			</div>	
+			<table class="table table-bordered table-hover table-condensed">
+				<tr *ngFor="let item of transactions">
+					<td>{{item.data.timestamp | date: 'MMM, dd, yyyy hh:mm' }}</td>
+  					<td>{{item.data.decrip}} </td>
+  					<td [ngStyle]="{'color':'red'}" *ngIf="item.data.amount < 0">{{item.data.amount  | currency }} </td>
+  					<td *ngIf="item.data.amount > 0">{{item.data.amount  | currency }} </td>
+  				</tr>	
+			</table>	
+		</div>	
+	</div>	
+
+
+  </div>		
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 centered">
+			<div class="card">
+  				<div class="card-header">
+  					<h5><span class="material-icons"><span class="material-icons">
+  					person</span></span> SIGN-IN STOCK MARKET</h5>
+  			    </div>
+			<form class="forma" [formGroup]="signinForm">
+ 				<label>EMAIL</label>
+ 				<input type="text" class="form-control" formControlName="email" 
+ 					[class.is-invalid]="signinForm.get('email') && signinForm.get('email').invalid"> 
+ 				<label>PASSWORD</label>
+ 				<input type="password" class="form-control" formControlName="password" 
+ 					[class.is-invalid]="signinForm.get('password') && signinForm.get('password').invalid"> 
+ 				<label>NAME</label>
+ 				<input type="text" class="form-control" formControlName="name" 
+ 					[class.is-invalid]="signinForm.get('name') && signinForm.get('name').invalid"> 
+ 					<button mat-raised-button color="accent" (click)="signUp()">SUBMIT</button>
+ 				<br>
+  			</form>
+  			<div class="error">{{ errorMessage }}</div>
+		</div>	
+		
+	</div>	
+</div>
+
+

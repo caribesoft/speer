@@ -1,0 +1,33 @@
+<div class="container">
+<h4>Buy Stock</h4>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card" *ngFor="let item of shares">
+            <div class="card-header verde">
+              <h5><span class="material-icons">info</span> STOCK INFO</h5>
+            </div>
+            <table class="table table-stripped table-bordered forma" 
+            >
+              <tr>
+                <td>Symbol</td><td>{{item.data.symbol}}</td>
+              </tr>
+              <tr>
+                <td>Name</td><td>{{item.data.name}}</td>
+              </tr>  
+              <tr>
+                <td>Price</td><td>{{item.data.price | currency}}</td>
+              </tr>
+            </table>
+            <hr>
+           <form class="forma" #buyForm="ngForm" (ngSubmit)="submitForm()">
+             <label>Quantity</label>
+             <input type="number" class="form-control" name="qty" 
+             [(ngModel)] = "qty" min="1"  ng-init="est.mpg=1.00" > 
+            <br>
+            <div class="total"><span>Total</span> {{ qty * item.data.price | currency }} </div>
+            <button class="btn btn.success btn-sm"> Buy Now </button>
+           </form>
+           <div class="error">{{ msgError }}</div>
+    </div>  
+  </div>  
+</div>

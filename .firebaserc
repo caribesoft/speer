@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "muffinhouse-f63af": {
+      "hosting": {
+        "stockmkt": [
+          "muffinhouse-f63af"
+        ]
+      }
+    }
+  }
+}

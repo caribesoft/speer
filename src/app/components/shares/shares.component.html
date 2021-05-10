@@ -1,0 +1,35 @@
+<div class="container">
+	<h4>STOCK EXCHANGE</h4>
+</div>
+<div class="container">
+  <div class="row">	
+	<div class="col-md-12">
+	<div class="thistable">	
+		<table class="table table-hover table-responsive table-bordered table-condensed">
+			<thead>
+				<th>Symbol</th>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Change</th>
+				<th>Chg %</th>
+				<th>Vol.M</th>
+				<th>Buy</th>
+			</thead>
+			<tbody>
+				<tr *ngFor="let item of shares">
+					<td>{{item.data.symbol}}</td>
+					<td width="15%">{{item.data.name}}</td>
+					<td class="rig">{{item.data.price | currency }}</td>
+					<td class="rig" [ngStyle]="{'color':'red'}" *ngIf="item.data.change < 0">{{item.data.change}}</td>
+					<td class="rig" *ngIf="item.data.change > 0">{{item.data.change}}</td>
+					<td class="rig" [ngStyle]="{'color':'red'}" *ngIf="item.data.chgper < 0">{{item.data.chgper}}</td>
+					<td class="rig" *ngIf="item.data.change > 0">{{item.data.chgper}}</td>
+					<td class="rig">{{item.data.volume}}</td>
+					<td><button class="btn btn-success btn-sm" [routerLink]="['/buystock', item.data.symbol]">BUY</button></td>
+				</tr>	
+			</tbody>
+		</table>
+	</div>
+	</div>
+  </div>
+</div>  		

@@ -1,0 +1,21 @@
+h4 {
+	color: teal;
+	letter-spacing: 12px;
+}
+
+.rig {
+	text-align: right;
+}
+
+.red {
+	text-align: right;
+	color: red;
+}
+
+.thistable {
+	width: 100%;
+	overflow-x: auto;
+}
+
+th { text-align: center; }	
+

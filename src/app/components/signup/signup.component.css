@@ -1,0 +1,36 @@
+.forma {
+	padding: 20px;
+}
+
+.main {
+    margin: 0 auto;
+    text-align: left;
+    width: 600px;
+}
+
+.card-header {
+	background: teal;
+	color: #FFFFFF;
+}
+
+.centered {
+    display: block;
+    
+    margin: 0 auto;
+    margin-top: 150px;
+
+}
+
+.error {
+	color: #FF0000;
+	padding: 10px;
+	text-align: center;
+}
+
+.btn-sm {
+	margin-right: 10px;
+}
+
+.mat-raised-button{
+	width: 100%;
+}

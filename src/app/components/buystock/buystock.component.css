@@ -1,0 +1,33 @@
+
+table {
+  width: 100%;
+}
+
+h4 {
+	color: teal;
+	letter-spacing: 12px;
+}
+
+.forma {
+	padding: 20px;
+}
+
+.verde {
+	padding: 20px;
+	background: #eee;
+	color: #000;
+}
+
+.total {
+	float: right;
+	font-size: 2em;
+}
+.total span { font-size: 16px }
+
+.error {
+	text-align: center;
+	width: 100%;
+	color: red;
+}
+
+

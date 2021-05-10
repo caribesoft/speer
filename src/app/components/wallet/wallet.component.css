@@ -1,0 +1,28 @@
+
+.forma {
+	padding: 10px;
+}
+
+.balance {
+	font-size: 2.5em;
+	text-align: center;
+	font-family: initial;
+}
+
+.btn {
+	margin-right: 10px;
+}
+
+.error-message {
+	padding: 10px;
+}
+
+h4 {
+	color: teal;
+	letter-spacing: 12px;
+}
+
+.verde {
+	background: #04a0d4;
+	color: #FFFFFF;
+}
