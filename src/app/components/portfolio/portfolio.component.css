@@ -2,3 +2,14 @@ h4 {
 	color: teal;
 	letter-spacing: 12px;
 }
+
+.thistable {
+	width: 100%;
+	overflow-x: auto;
+}
+
+th { text-align: center; }	
+
+.rig {
+	text-align: right;
+}

@@ -1,18 +1,19 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav  #drawer class="sidenav" fixedInViewport
+  <mat-sidenav  #drawer class="sidenav"  fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
+
     <mat-toolbar *ngIf="user">Menu</mat-toolbar>
     <mat-nav-list *ngIf="user">
-      <a mat-list-item [routerLink]="['/']"><span class="material-icons">home</span> Home</a>
-      <a mat-list-item [routerLink]="['/wallet']"><span class="material-icons">
+      <a mat-list-item [routerLink]="['/']" (click)="closeSideNav()"><span class="material-icons">home</span> Home</a>
+      <a mat-list-item [routerLink]="['/wallet']" (click)="closeSideNav()"><span class="material-icons">
         paid </span> Wallet</a>
-      <a mat-list-item [routerLink]="['shares']"href="#">
+      <a mat-list-item [routerLink]="['shares']" href="#" (click)="closeSideNav()">
         <span class="material-icons"> add_shopping_cart </span>Shares</a>
-      <a mat-list-item [routerLink]="['portfolio']"> 
+      <a mat-list-item [routerLink]="['portfolio']"  (click)="closeSideNav()"> 
       <span class="material-icons">work</span> Portfolio</a>
-      <a mat-list-item (click)="logOut()"> <span class="material-icons">power_settings_new</span> Log-Out</a>
+      <a mat-list-item (click)="logOut()" (click)="closeSideNav()"> <span class="material-icons">power_settings_new</span> Log-Out</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

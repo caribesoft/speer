@@ -10,6 +10,13 @@
   background: teal;
   color: #FFF;
 }
+.web {
+	display: block;
+}
+
+.mobile {
+  	display: none;
+  } 
 
 .mat-toolbar.mat-primary {
   position: sticky;
@@ -23,3 +30,11 @@
 	margin-right: 10px;
 }
 
+@media(max-width: 414px) {
+  .web {
+	display: non;
+   }
+  .mobile {
+  	display: block;
+  } 
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -12,6 +12,7 @@ import { Router } from "@angular/router";
   styleUrls: ['./main-nav.component.css']
 })
 export class MainNavComponent {
+  @ViewChild('drawer') drawer: any;
   user: any;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -34,6 +35,12 @@ export class MainNavComponent {
     })
 
   }
+
+  closeSideNav() {
+  if (this.drawer._mode=='over') {
+    this.drawer.close();
+  }
+}
 
 
   logOut(){

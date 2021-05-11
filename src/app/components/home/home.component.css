@@ -10,3 +10,13 @@ h4 {
 	color: teal;
 	letter-spacing: 12px;
 }
+
+.imaka {
+   		max-width: 100%;
+	}
+
+@media(max-width: 414px) {
+  .imaka {
+   		max-width: 90%;
+	}
+}	

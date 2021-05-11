@@ -13,8 +13,8 @@
  				<label>PASSWORD</label>
  				<input type="password" class="form-control" formControlName="password" 
  					[class.is-invalid]="loginForm.get('password') && loginForm.get('password').invalid"> 
- 				<button type="reset" class="btn btn-sm">RESET</button>
- 				<button class="btn btn-sm" (click)="signIn()">SUBMIT</button>
+ 				
+ 				<button mat-raised-button color="basic" (click)="signIn()">LOGIN</button>
  				<br>
   			</form>
   			<div class="error">{{ errorMessage }}</div>

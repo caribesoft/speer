@@ -4,7 +4,7 @@
 			<div class="card">
   				<div class="card-header">
   					<h5><span class="material-icons"><span class="material-icons">
-  					person</span></span> SIGN-IN STOCK MARKET</h5>
+  					person</span></span> SIGN-IN [Create Account]</h5>
   			    </div>
 			<form class="forma" [formGroup]="signinForm">
  				<label>EMAIL</label>
@@ -18,6 +18,7 @@
  					[class.is-invalid]="signinForm.get('name') && signinForm.get('name').invalid"> 
  					<button mat-raised-button color="accent" (click)="signUp()">SUBMIT</button>
  				<br>
+ 				<div class="back"><a [routerLink]="['/']" class="btn"> <- BACK</a></div>
   			</form>
   			<div class="error">{{ errorMessage }}</div>
 		</div>	
