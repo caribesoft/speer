@@ -2,6 +2,27 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
+# Build a stock market tracking system (simulator)
+
+This system was developed with: Angular v 9.1 and used GCS / Firebase &  Hosting
+
+# INSTALLATION:
+Clone this  repository to you local computer
+Go to your local directory
+Install dependencies:  npm install
+
+
+# APPLICATION DESCRIPTION:
+
+The project has the following features:
+
+Sign-In.-  create a new account to access the web application
+Log-In.- login into the system
+Wallet:  Users can see your balance, transactions and add balance to your Wallet.
+Shares.- you can see Stock Market Shares and Buy. The system will check if you have enough fund, if you have it the transaction will be processed and will be added to your Portfolio, your Waller balance will be updated.
+Portfolio.- Users can see their portfolios list of shares bought.
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
