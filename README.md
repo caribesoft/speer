@@ -16,12 +16,14 @@ Install dependencies:  npm install
 
 The project has the following features:
 
-Sign-In.-  create a new account to access the web application
-Log-In.- login into the system
-Wallet:  Users can see your balance, transactions and add balance to your Wallet.
-Shares.- you can see Stock Market Shares and Buy. The system will check if you have enough fund, if you have it the transaction will be processed and will be added to your Portfolio, your Waller balance will be updated.
-Portfolio.- Users can see their portfolios list of shares bought.
+- Sign-In.-  create a new account to access the web application
+- Log-In.- login into the system
+- Wallet:  Users can see your balance, transactions and add balance to your Wallet.
+- Shares.- you can see Stock Market Shares and Buy. The system will check if you have enough fund, if you have it the transaction will be processed and will be  added to your Portfolio, your Waller balance will be updated.
+- Portfolio.- Users can see their portfolios list of shares bought.
 
+## LIVE TEST
+https://muffinhouse-f63af.web.app/
 
 ## Development server
 
